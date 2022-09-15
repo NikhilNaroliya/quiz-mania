@@ -1,0 +1,11 @@
+{
+  "name": "quiz-mania",
+  "version": "1.0.0",
+  "description": "its a quiz game based on india's knowledge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikhil Kumar Naroliya",
+  "license": "ISC"
+}
