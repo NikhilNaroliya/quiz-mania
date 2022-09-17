@@ -1,6 +1,9 @@
+const chalk = require('chalk');
+
+// console.log(chalk.blue('Hello world!'));
 var readlineSync = require("readline-sync");
 var score = 0;
-console.log(" -------your welcome to GK Mania------- \n\n    ----plat hard----\n\n ----------rules----------\n\n --for each correct ans you will get 1 point and for wrong ans you will loose 1 point -- \n\n")
+console.log(chalk.bgBlue(" -------your welcome to GK Mania------- \n\n    ----plat hard----\n\n ----------rules----------\n\n --for each correct ans you will get 1 point and for wrong ans you will loose 1 point -- \n\n"))
 do {
   var score1 = [], k;
   k = 0;
@@ -17,7 +20,7 @@ do {
     }
 
     console.log("-------------------------------------------")
-    console.log("your current score is " + score);
+    console.log(chalk.green("your current score is " + score));
     console.log("-------------------------------------------")
     score1[k] = score;
     k++;
@@ -58,7 +61,7 @@ do {
   console.log(" -------------------\n");
   console.log("--correct ans are --")
   for (var i = 0; i < 4; i++) {
-    console.log(ans[i]);
+    console.log(chalk.magenta(ans[i]));
   }
   // user ka score aur high score batana
   // max score
@@ -67,8 +70,8 @@ do {
     if (score1[i] > max)
       max = score1[i]
   }
-  console.log("max score is " + max)
+  console.log(chalk.green("max score is " + max))
   console.log(" Enter no for exit or press any key to continue ")
   var choice = readlineSync.question("for exit press no or NO ");
   score = 0;
-} while (choice!= ('no' || 'No'));
+} while (choice != ('no' || 'No'));
